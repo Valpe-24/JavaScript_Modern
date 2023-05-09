@@ -58,6 +58,9 @@ const minNumber = (array) => {
   return smallestNumber;
 };
 
+const interleave = (array, array1) => {
+  
+}
 
 
 const main = async () => {
