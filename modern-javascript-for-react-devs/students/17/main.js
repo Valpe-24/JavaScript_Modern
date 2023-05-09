@@ -33,7 +33,6 @@ const ex3 = () => {
 //
 // Your functions here...
 //
-
 const countNumbers = (array) => {
   let retval = 0;
 
