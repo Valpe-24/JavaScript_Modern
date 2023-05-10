@@ -40,6 +40,11 @@ console.log(palidrome('radar'));
 console.log(palidrome('month'));
 }
 
+const ex5 = () => {
+
+  console.log(timesWord("today this is a this is a this is a test.", "this"));
+}
+
 const countNumbers = (array) => {
   let retval = 0;
 
@@ -92,12 +97,25 @@ const palidrome = (word) => {
   }
 }
 
+const timesWord = (sentence, word) => {
+  let wordArray = sentence.split(' ');
+  let wordCount = 0; 
+
+    for (let i = 0; i < wordArray.length; i++){
+      if(wordArray[i] == word){
+        wordCount++; 
+      }
+    }
+  return word + " appears: " + wordCount + " times."
+}
+
 
 const main = async () => {
   ex1();
   ex2();
   ex3();
   ex4();
+  ex5();
 };
 
 main();
