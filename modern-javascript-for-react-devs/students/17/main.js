@@ -41,8 +41,12 @@ console.log(palidrome('month'));
 }
 
 const ex5 = () => {
-
   console.log(timesWord("today this is a this is a this is a test.", "this"));
+}
+
+const ex6 = () => {
+  const array = ['this', 'is', 'happiness', 'test', 'happy'];
+    console.log(longestString(array));
 }
 
 const countNumbers = (array) => {
@@ -109,6 +113,21 @@ const timesWord = (sentence, word) => {
   return word + " appears: " + wordCount + " times."
 }
 
+const longestString = (array) => {
+  let longestWord = ''; 
+  let mostLetters = 0; 
+
+    for(let i = 0; i < array.length; i++){
+      if(i == 0)
+        mostLetters = array[0].length;
+      else if(array[i].length > mostLetters)
+        mostLetters = array[i].length;
+        if (array[i].length == mostLetters)
+          longestWord = array[i];
+    }
+    return longestWord; 
+}
+  
 
 const main = async () => {
   ex1();
@@ -116,6 +135,7 @@ const main = async () => {
   ex3();
   ex4();
   ex5();
+  ex6();
 };
 
 main();
