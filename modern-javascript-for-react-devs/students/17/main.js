@@ -35,9 +35,11 @@ const ex3 = () => {
 //array1 = [1, 2];
 //array2 = ['a', 'b', 'c', 'd', 'e'];
 
-//
-// Your functions here...
-//
+const ex4 = () => {
+console.log(palidrome('radar'));
+console.log(palidrome('month'));
+}
+
 const countNumbers = (array) => {
   let retval = 0;
 
@@ -78,11 +80,24 @@ const interleave = (array, array1) => {
   }
 }
 
+const palidrome = (word) => {
+  let newWord = "";
+  for (let i = word.length -1; i >= 0; i--) {
+    newWord += word[i];
+  }
+  if (newWord == word) {
+    return true; 
+  }else {
+    return false; 
+  }
+}
+
 
 const main = async () => {
   ex1();
   ex2();
   ex3();
+  ex4();
 };
 
 main();
