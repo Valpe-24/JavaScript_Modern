@@ -80,16 +80,15 @@ const interleave = (array, array1) => {
   }
 }
 
-const palindrome = (word) => {
+const palidrome = (word) => {
   let newWord = "";
-  for (let i = word.length - 1; i > 0; i--) {
+  for (let i = word.length -1; i >= 0; i--) {
     newWord += word[i];
   }
-
   if (newWord == word) {
     return true; 
-  } else {
-    false; 
+  }else {
+    return false; 
   }
 }
 
