@@ -114,7 +114,7 @@ const timesWord = (sentence, word) => {
 }
 
 const longestString = (array) => {
-  //let longestWord = ''; 
+  let longestWord = ''; 
   let mostLetters = 0; 
 
     for(let i = 0; i < array.length; i++){
@@ -122,7 +122,10 @@ const longestString = (array) => {
         mostLetters = array[0].length;
       else if(array[i].length > mostLetters)
         mostLetters = array[i].length;
+        if (array[i].length == mostLetters)
+          longestWord = array[i];
     }
+    return longestWord; 
 }
   
 
