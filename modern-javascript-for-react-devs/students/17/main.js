@@ -46,7 +46,7 @@ const ex5 = () => {
 
 const ex6 = () => {
   const array = ['this', 'is', 'happiness', 'test', 'happy'];
-    console.log(longestString(array));
+  console.log(longestString(array));
 }
 
 // const ex7 = () => {
@@ -57,13 +57,19 @@ const ex6 = () => {
 
 const ex8 = () => {
   let words = "Count the words in this string";
-    console.log(countWords(words));
+  console.log(countWords(words));
 
 }
 
 const ex9 = () => {
   var a = "this counts the number of words that end in s";
-    console.log(countS(a));
+  console.log(countS(a));
+
+}
+
+const ex10 = () => {
+  var array = ["this", "is", "a", "test"];
+  console.log(countLetters(array));
 
 }
 
@@ -174,6 +180,17 @@ const countS = (sentence) => {
   return wordsEndS;
 
 }
+
+const countLetters = (array) => {
+  let newArray =[]; 
+   for (let i = 0; i < array.length; i++) {
+    newArray.push(array[i].length); 
+   }
+
+   return newArray.reduce((accumulator, currentValue) =>{
+    return accumulator + currentValue;
+   });
+}
   
 
 const main = async () => {
@@ -185,7 +202,8 @@ const main = async () => {
   ex6();
   // ex7();
   ex8();
-  ex9()
+  ex9();
+  ex10();
 };
 
 main();
