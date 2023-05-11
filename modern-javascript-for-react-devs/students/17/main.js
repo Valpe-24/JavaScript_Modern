@@ -73,6 +73,12 @@ const ex10 = () => {
 
 }
 
+const ex11 = () => {
+  let arr = ['dog', 3, 7, 'cat', 13, 'car'];
+  console.log(numbersOnly(arr));
+
+}
+
 const countNumbers = (array) => {
   let retval = 0;
 
@@ -191,6 +197,15 @@ const countLetters = (array) => {
     return accumulator + currentValue;
    });
 }
+
+const numbersOnly =  (array) => {
+  let numberArray = []
+  for(let i = 0; i < array.length; i++){
+    if (typeof array[i] == 'number')
+      numberArray.push(array[i]);
+  }
+  return numberArray; 
+}
   
 
 const main = async () => {
@@ -204,6 +219,7 @@ const main = async () => {
   ex8();
   ex9();
   ex10();
+  ex11();
 };
 
 main();
