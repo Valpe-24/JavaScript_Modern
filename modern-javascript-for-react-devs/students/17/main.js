@@ -79,6 +79,30 @@ const ex11 = () => {
 
 }
 
+// const ex12 = () => {
+//   const c = new Calculator();
+//     c.add(1,2);
+//     c.sub(4,1);
+//     c.div(10,2);
+//     c.mul(2,2)
+//   console.log(c.getHistory())
+// }
+const ex13 = () => {
+  let sum = 0
+  let dict = [
+    { "firstName": "joe", "lastName": "smith", "age": 10 },
+    { "firstName": "paul", "lastName": "simmon", "age": 20 },
+    { "firstName": "fred", "lastName": "jones", "age": 30 },
+ 
+]
+for(let i = 0; i < dict.length; i++){
+  // console.log(dict[i]["age"])
+  sum += dict[i]["age"];
+}
+
+console.log(sum); 
+}
+
 const countNumbers = (array) => {
   let retval = 0;
 
@@ -206,6 +230,36 @@ const numbersOnly =  (array) => {
   }
   return numberArray; 
 }
+
+// class Calculator {
+//   constructor(number1, number2) {
+//     this.number1 = number1; 
+//     this.number2 = number2; 
+//   }
+
+//   get getHistory() {
+//     return this.add(), this.sub(), this.div(), this.mul();
+    
+//   }
+
+//   add(number1, number2) {
+//     return `Add: ${this.number1} + ${this.number} = ${this.number1 + this.number2}`
+//   }
+
+//   sub() {
+//     return `Sub: ${this.number1} - ${this.number} = ${this.number1 - this.number2}`
+
+//   }
+//   div() {
+//     return `Div: ${this.number1} / ${this.number} = ${this.number1 / this.number2}`
+
+//   }
+//   mul() {
+//     return `Mul: ${this.number1} * ${this.number} = ${this.number1 * this.number2}`
+    
+//   }
+// }
+
   
 
 const main = async () => {
@@ -220,6 +274,8 @@ const main = async () => {
   ex9();
   ex10();
   ex11();
+  // ex12();
+  ex13();
 };
 
 main();
