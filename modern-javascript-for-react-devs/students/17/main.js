@@ -100,7 +100,27 @@ for(let i = 0; i < dict.length; i++){
   sum += dict[i]["age"];
 }
 
-console.log(sum); 
+console.log(`The total age is: ${sum}`); 
+}
+
+const ex14 = () => {
+  let customers = [{
+    name: 'ABC Inc',
+    credit: 100
+}, {
+    name: 'ACME Corp',
+    credit: 200
+}, {
+    name: 'IoT AG',
+    credit: 300
+}];
+
+let costumerCredit = (creditScore) =>  {
+  return creditScore.credit === 200; 
+}
+
+console.log(customers.find(costumerCredit));
+
 }
 
 const countNumbers = (array) => {
@@ -276,6 +296,7 @@ const main = async () => {
   ex11();
   // ex12();
   ex13();
+  ex14();
 };
 
 main();
