@@ -49,6 +49,18 @@ const ex6 = () => {
     console.log(longestString(array));
 }
 
+// const ex7 = () => {
+//   let n = [1, 3, 6, 3, 6, 10];
+//     console.log(sort(n));
+
+// }
+
+const ex8 = () => {
+  let words = "Count the words in this string";
+console.log(countWords(words));
+
+}
+
 const countNumbers = (array) => {
   let retval = 0;
 
@@ -89,6 +101,7 @@ const interleave = (array, array1) => {
   }
 }
 
+
 const palidrome = (word) => {
   let newWord = "";
   for (let i = word.length -1; i >= 0; i--) {
@@ -127,6 +140,20 @@ const longestString = (array) => {
     }
     return longestWord; 
 }
+
+// const sort = (array) => {
+//     for(let i = 0; i < array.length; i++){
+      
+//     }
+    
+//   return newArray; 
+// }
+
+const countWords = (sentence) =>{
+  let words = sentence.split(' ');
+  let numberOfWords = words.length
+  return numberOfWords
+}
   
 
 const main = async () => {
@@ -136,6 +163,8 @@ const main = async () => {
   ex4();
   ex5();
   ex6();
+  // ex7();
+  ex8();
 };
 
 main();
