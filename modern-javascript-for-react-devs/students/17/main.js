@@ -57,7 +57,13 @@ const ex6 = () => {
 
 const ex8 = () => {
   let words = "Count the words in this string";
-console.log(countWords(words));
+    console.log(countWords(words));
+
+}
+
+const ex9 = () => {
+  var a = "this counts the number of words that end in s";
+    console.log(countS(a));
 
 }
 
@@ -154,6 +160,20 @@ const countWords = (sentence) =>{
   let numberOfWords = words.length
   return numberOfWords
 }
+
+const countS = (sentence) => {
+  let wordsEndS = 0;
+  let words = sentence.split(' ');
+    for(let i = 0; i < words.length; i++){
+      let letters = words[i].split('');
+        let index = letters.length -1;
+        if (letters[index] == 's'){
+          wordsEndS++; 
+        }
+    }
+  return wordsEndS;
+
+}
   
 
 const main = async () => {
@@ -165,6 +185,7 @@ const main = async () => {
   ex6();
   // ex7();
   ex8();
+  ex9()
 };
 
 main();
